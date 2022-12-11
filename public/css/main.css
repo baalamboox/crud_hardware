@@ -1,0 +1,63 @@
+@font-face {
+  font-family: Manjari;
+  src: url("../fonts/Manjari/Manjari-Regular.ttf");
+}
+* {
+  font-family: Manjari;
+}
+
+body {
+  background-color: #eff0f1;
+}
+
+.container-photo-input img {
+  width: 180px;
+  height: 180px;
+}
+.container-photo-input span {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-left: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.container-photo-input span input {
+  width: inherit;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+.no-hardware {
+  width: 300px;
+  height: 300px;
+}
+
+.hardware-photo {
+  width: 64px;
+  height: 64px;
+}
+
+.hardware-card .hardware-profile {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: -100px;
+}
+.hardware-card .btn-upload {
+  position: relative;
+  top: -140px;
+}
+.hardware-card .data-container-upload {
+  margin-top: -160px;
+}
+.hardware-card .data-container {
+  margin-top: -70px;
+}
+
+/*# sourceMappingURL=main.css.map */

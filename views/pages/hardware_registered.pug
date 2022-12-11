@@ -1,0 +1,52 @@
+extends ../layouts/main_layout.pug 
+block main_container 
+    .row.w-100.mx-auto 
+        .col 
+            .card.shadow-lg.p-5 
+                .card-body 
+                    .table-responsive 
+                        table.table.table-hover#hardware_table
+                            thead
+                                tr
+                                    th(scope="col") Foto 
+                                    th(scope="col") Nombre 
+                                    th(scope="col") Marca 
+                                    th(scope="col") Modelo
+                                    th.text-center(scope="col") Ver 
+                                    th.text-center(scope="col") Editar 
+                                    th.text-center(scope="col") Eliminar 
+                            tbody.align-middle
+                                if status
+                                    each item in data
+                                        tr
+                                            td.text-center 
+                                                img.hardware-photo.rounded-circle.shadow.border(src=item.hardware_photo, alt="Loading...")
+                                            td=item.hardware_name
+                                            td=item.hardware_brand
+                                            td=item.hardware_model
+                                            td.text-center 
+                                                a.btn.btn-light(href=`/show/${item._id}`) 
+                                                    i.fa-solid.fa-eye.text-secondary
+                                            td.text-center 
+                                                a.btn.btn-light(href=`/edit/${item._id}`) 
+                                                    i.fa-solid.fa-pen-to-square.text-warning
+                                            td.text-center 
+                                                a.btn.btn-light(href=`/erase/${item._id}`) 
+                                                    i.fa-solid.fa-trash-can.text-danger
+                                    
+                                else 
+                                    tr
+                                        td.text-center(colspan="7") 
+                                            .d-flex.align-items-center.justify-content-around.my-4
+                                                img.no-hardware.rounded-circle(src="/static/img/default/cable.png", alt="Loading...")
+                                                .text-center 
+                                                    span.fs-1.fw-light No tienes hardware aún...
+                                                    a.btn.btn-secondary(href="/") 
+                                                        i.fa-solid.fa-plus.me-2 
+                                                        |Agrear ahora
+                                        td
+                                        td
+                                        td
+                                        td
+                                        td
+                                        td

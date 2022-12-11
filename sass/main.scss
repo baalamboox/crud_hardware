@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Manjari;
+    src: url('../fonts/Manjari/Manjari-Regular.ttf');
+}
+* {
+    font-family: Manjari;
+}
+body {
+    background-color: #eff0f1;
+}
+@import 'create_hardware';
+@import 'hardware_registered';
+@import 'show_hardware'

@@ -1,0 +1,35 @@
+doctype 
+html(lang='es-MX', dir="ltr") 
+    head 
+        meta(charset='utf-8') 
+        meta(name="viewport", content="width=device-width, initial-scale=1.0") 
+        title=title 
+        link(rel="shortcut icon", href="/static/img/favicon.png", type="image/x-icon") 
+        link(rel="stylesheet", href="/static/vendor/bootstrap/css/bootstrap.min.css") 
+        link(rel="stylesheet", href="/static/vendor/fontawesome/css/all.min.css") 
+        link(rel="stylesheet", href="/static/vendor/datatables/datatables.min.css") 
+        link(rel="stylesheet", href="/static/css/main.css") 
+    body 
+        nav.navbar.navbar-expand-lg.bg-light.mb-5
+            .container-fluid
+                a.navbar-brand.d-flex.align-items-center(href="/")
+                    img.d-inline-block.align-text-top.me-2(src="/static/img/favicon.png", alt="Loading...", width="64", height="64")
+                    |xHardware
+                button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
+                    span.navbar-toggler-icon
+                #navbarSupportedContent.collapse.navbar-collapse
+                    ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+                        li.nav-item
+                            a.nav-link(href="/")
+                                i.fa-solid.fa-plus.me-2
+                                |Agregar hardware
+                        li.nav-item
+                            a.nav-link(href="/registered")
+                                i.fa-solid.fa-microchip.me-2
+                                |Hardware registrado
+        .container.vh-100.d-flex.align-items-center 
+            block main_container
+        script(src="/static/vendor/jquery/jquery-3.6.1.min.js") 
+        script(src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js") 
+        script(src="/static/vendor/datatables/datatables.min.js") 
+        script(src="/static/js/main.js") 

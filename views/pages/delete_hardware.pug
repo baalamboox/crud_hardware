@@ -1,0 +1,45 @@
+extends ../layouts/main_layout.pug
+block main_container 
+    .row.w-100.mx-auto.justify-content-center.mt-5
+        .col-md-5 
+            .card.p-2
+                .hardware-card.card-body 
+                    .text-center 
+                        img.hardware-profile.rounded-circle.shadow-lg.border(src=data.hardware_photo, alt="Loading...")
+                    .data-container.text-secondary 
+                        .form-floating.mb-3
+                            input.form-control.border-0#hardware_name(type="text", name="hardware_name", placeholder="Nombre", value=data.hardware_name, disabled)
+                            label.form-label(for="") 
+                                i.fa-solid.fa-font.me-2
+                                |Nombre
+                        .row 
+                            .col-md-6 
+                                .form-floating.mb-3
+                                    input.form-control.border-0#hardware_name(type="text", name="hardware_name", placeholder="Marca", value=data.hardware_brand, disabled)
+                                    label.form-label(for="") 
+                                        i.fa-solid.fa-copyright.me-2
+                                        |Marca
+                            .col-md-6                         
+                                .form-floating.mb-3
+                                    input.form-control.border-0#hardware_name(type="text", name="hardware_name", placeholder="Nombre", value=data.hardware_model, disabled)
+                                    label.form-label(for="") 
+                                        i.fa-solid.fa-cubes.me-2 
+                                        |Modelo 
+                        .form-floating.mb-3 
+                                    input.form-control.border-0#hardware_year(type="date", name="hardware_year", placeholder="Año de lanzamiento", value=data.hardware_year, disabled)
+                                    label.form-label(for="hardware_year") 
+                                        i.fa-solid.fa-calendar-days.me-2
+                                        |Año de lanzamiento
+                        .form-floating.mb-3
+                                    textarea.form-control.border-0#floatingTextarea2(placeholder="Descripcion", style="height: 100px", disabled)=data.hardware_description
+                                    label(for="floatingTextarea2") 
+                                        i.fa-solid.fa-message.me-2
+                                        |Descripción
+                        .text-end.mt-4 
+                            .btn-group 
+                                a.btn.btn-secondary(href="/registered") 
+                                    i.fa-solid.fa-xmark.me-2
+                                    |Cancelar
+                                a.btn.btn-danger(href=`/delete/${data._id}`) 
+                                    i.fa-solid.fa-trash-can.me-2
+                                    |Eliminar

@@ -1,0 +1,25 @@
+{
+  "name": "xzunun_hardware",
+  "version": "1.0.0",
+  "description": "A simple CRUD",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js",
+    "scss": "sass --watch ./sass/main.scss ./public/css/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [
+    "CRUD"
+  ],
+  "author": "Xzunun",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "mongoose": "^6.7.3",
+    "pug": "^3.0.2",
+    "sass": "^1.56.1"
+  }
+}
